@@ -20,6 +20,12 @@ public class Main {
         }
     }
     
+    /**
+     * <h2>Función esPrimo</h2>
+     * Descripción: Detecta si un número es primo o no
+     * @param numero Resive un número entero
+     * @return Retorna un valor booleano indicando si el número recibido es primo o no
+     */
     static boolean esPrimo(int numero){
         int contador = 0; //CONTADOR, CON CUANTOS NUMEROS SE PUEDE DIVIDIR EL NUMERO INGRESADO, VALOR INICIAL CERO
         
