@@ -42,6 +42,13 @@ public class Clientes extends Persona {
         this.vip = vip;
     }
 
+    @Override
+    public String obtenerDetalle() {
+        return super.obtenerDetalle() + "Es Vip: " + this.vip; 
+    }
+    
+    
+
    //toString
 
     @Override

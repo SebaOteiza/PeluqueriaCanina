@@ -28,6 +28,13 @@ public class Empleado extends Persona{ //extends es la forma de herederar de la 
         this.sueldo = sueldo;
     }
 
+     @Override
+    public String obtenerDetalle(){ //HEREDADO DE CLASE PERSONA
+        return super.obtenerDetalle() + "Sueldo: "+ this.sueldo;
+    }
+    
+    
+   
    //ToString
 
     @Override
