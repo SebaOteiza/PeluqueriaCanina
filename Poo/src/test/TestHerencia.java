@@ -40,6 +40,11 @@ public class TestHerencia {
         System.out.println(cliente1);
         
         
+        //LLAMADO DE LA FUNCION INSTANCEOF
+        determinarTipo(empleado);//objeto empleado
+        determinarTipo(cliente);
+        determinarTipo(persona);
+        
         
     }
     
@@ -49,5 +54,24 @@ public class TestHerencia {
         System.out.println(persona.obtenerDetalle());//ese objeto que recibimos accede al metodo  obtenerDetalle
     }
     
-
+        
+    //INSTANCEOF
+    //LA BUSQUEDA SE REALIZA DE MAS GENERICA A MENOS GENERICA
+    //LAS MENOS GENERICAS SON LAS SUBCLASES
+    //LAS MÁS GENERICAS SON LAS SUPERCLASES
+    
+    public static void determinarTipo(Object objeto){//OBJECT ES LA CLASE PADRE DE TODAS LAS CLASES EN JAVA
+        if(objeto instanceof Empleado){//HAY QUE REALIZAR LA COMPARACION DE LA MÁS GENERICA A LA MENOS GENERICA
+            System.out.println("Es de tipo Empleado");
+        }else if(objeto instanceof Clientes){
+            System.out.println("Es de tipo Clientes");
+        }else if(objeto instanceof Persona){
+            System.out.println("Es de tipo Persona");
+        }else if( objeto instanceof Object){//CLASE MÁS GENERICA DE TODAS
+            System.out.println("Es de tipo Object");
+        }
+        
+        
+    }
+    
 }
