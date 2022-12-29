@@ -1,6 +1,9 @@
 package herencia;
 
 //CLASE PADRE
+
+import java.util.Objects;
+
 public class Persona {
     
     //nuevo modificador de acceso (PROTECTED) 
@@ -81,6 +84,42 @@ public class Persona {
         sb.append('}');
         return sb.toString();
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 47 * hash + Objects.hashCode(this.nombre);
+        hash = 47 * hash + this.genero;
+        hash = 47 * hash + this.edad;
+        hash = 47 * hash + Objects.hashCode(this.direccion);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Persona other = (Persona) obj;
+        if (this.genero != other.genero) {
+            return false;
+        }
+        if (this.edad != other.edad) {
+            return false;
+        }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        return Objects.equals(this.direccion, other.direccion);
+    }
+    
+    
 
   
     

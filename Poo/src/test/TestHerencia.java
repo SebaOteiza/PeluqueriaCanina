@@ -6,10 +6,10 @@ public class TestHerencia {
     public static void main(String[] args) {
         
         //crear objeto de clase persona
-        
         Persona persona = new Persona("Perico los palotes", 'M', 55, "Cuscotopia");
         System.out.println(persona.obtenerDetalle());
         imprimer(persona);
+        
         
         //creacion de empleado
         
@@ -45,6 +45,46 @@ public class TestHerencia {
         determinarTipo(cliente);
         determinarTipo(persona);
         
+        
+        //CONVERSIÓN DE OBJETOS, esta conversión se llama DOWNCASTING
+        //DOWNCASTING  = conversión de clase padre a clase hija
+        Persona persona1 = new Empleado(65000, "Rodrigo");
+        //un objeto de tipo Persona que tendrá los datos de clase Empleado
+        
+        //PARA PODER ACCEDER A ESOS METODOS, DEBO CONVERTIR ESE OBJETO DE TIPO PERSONA A OBJETO EMPLEADO
+        Empleado empleado4 = (Empleado) persona1;
+        
+        //OBTENER DETALLES DEL NUEVO OBJETO
+        System.out.println(empleado4.obtenerDetalle());
+        
+        //CONVERSIÓN DE CLASE HIJA A CLASE PADRE 
+        //SE LLAMA UPCASTING 
+        
+        Persona persona5 = empleado4;
+        //PARA HACER LA CONVERSION DE OBJETO HIJO A OBJETO PADRE, SIMPLEMENTE LE ASIGNAMOS 
+        System.out.println(persona5.obtenerDetalle());
+        
+        
+        //EQUALS = DEVUELVE UN VALOR BOOLEANO, TRUE O FALSE 
+       
+        
+        //VAMOS A CREAR OBJETOS DEL MISMO TIPO Y COMPARAR SI SON IGUALES
+        Persona p1 = new Persona("El Mariana", 'm', 78, "Culiacan");
+        Persona p2 = new Persona("El Mariano", 'm', 78, "Culiacan");
+        
+        //comparar si los valores son iguales
+        System.out.println(p1.equals(p2));
+        
+        
+        //HASHCODE = DEVUELVE UN VALOR ENTERO
+        
+        if(p1.hashCode() == p2.hashCode()){
+            System.out.println("Los objetos son iguales");
+        }else{
+            System.out.println("Los objetos no son iguales");
+        }
+        //System.out.println(p1.hashCode());
+        //System.out.println(p2.hashCode());
         
     }
     
