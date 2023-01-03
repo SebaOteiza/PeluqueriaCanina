@@ -51,11 +51,14 @@ public class Suma extends javax.swing.JFrame {
         jLabel3.setText("Ingresa el primer Número: ");
 
         CajaNum1.setFont(new java.awt.Font("Adobe Garamond Pro", 0, 14)); // NOI18N
+        CajaNum1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         CajaNum2.setFont(new java.awt.Font("Adobe Garamond Pro", 0, 14)); // NOI18N
+        CajaNum2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         CajaTotal.setEditable(false);
-        CajaTotal.setFont(new java.awt.Font("Adobe Garamond Pro", 0, 14)); // NOI18N
+        CajaTotal.setFont(new java.awt.Font("Adobe Garamond Pro", 1, 14)); // NOI18N
+        CajaTotal.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
