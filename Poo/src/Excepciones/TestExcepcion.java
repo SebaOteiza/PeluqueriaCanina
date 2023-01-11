@@ -20,7 +20,7 @@ public class TestExcepcion {
                 System.out.println("Ingrese N2 : ");
                 int n2 = leer.nextInt();
 
-                int resultado = n1 / n2;
+                int resultado =  divivir(n1, n2);
                 System.out.println("Resultado -> " + resultado);
                 
                 continuarEjecucion = false;
@@ -36,8 +36,8 @@ public class TestExcepcion {
 
                 //MULTIPLES EXCEPCIONES
                 //si vemod que nuestra app es propensa a caer en varios error, podemos aumentar el número de CATCH para agrupar más excepciones
-            } catch (ArithmeticException e) {
-                System.err.println("Error: No se puede divivir entre 0");
+            } catch (OperadorExcepcion e) {//ESTA ES LA EXCEPCION QUE CREAMOS
+                System.err.println("Error: "+ e.getMessage());//obtener el mensaje 
             } catch (Exception e) { //CON ESTE EXCEPCION SOLITO, podemos considerar cualquier tipo de error posible si no sabemos lo que pueda ocurrir
                 e.printStackTrace(System.out); //System.out es lo que se muestra por consola 
             } finally { //esta instruccion es de final, esto se ejecuta siempre que termina la excepcion
@@ -52,6 +52,14 @@ public class TestExcepcion {
             //arroja la excepción ArithmeticException que es una clase ya definida en java 
         } while (continuarEjecucion);
 
+    }
+    
+    static int divivir(int n, int d) throws OperadorExcepcion{
+        if(d == 0){ //si el denominador es igual a 0 vamos a enviar nuestra excepcion
+            throw new OperadorExcepcion("Division entre cero"); //throw significa enviar
+            
+        }
+        return n / d;
     }
 
 }
