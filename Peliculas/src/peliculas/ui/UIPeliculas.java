@@ -25,8 +25,30 @@ public class UIPeliculas {
                     3
             );
 
-            switch (opcion) {
-                case "1":
+            int opcionInt = 0;
+            try {
+                opcionInt = Integer.parseInt(opcion);
+
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(
+                        null,
+                        "Las opciones tienen que ser números enteros\n"
+                        + e,
+                        "ERROR",
+                        JOptionPane.ERROR_MESSAGE
+                );
+
+            }catch(Exception e){
+                 JOptionPane.showMessageDialog(
+                        null,
+                        e,
+                        "ERROR",
+                        JOptionPane.ERROR_MESSAGE
+                );
+            }
+
+            switch (opcionInt) {
+                case 1:
                     String nombrePelicula = JOptionPane.showInputDialog(
                             null,
                             "Ingrese una película",
@@ -37,10 +59,10 @@ public class UIPeliculas {
                     pelicula = new Pelicula(nombrePelicula);
                     peliculas.insertarPelicula(pelicula);
                     break;
-                case "2":
+                case 2:
                     peliculas.listarPelicula();
                     break;
-                case "3":
+                case 3:
                     nombrePelicula = JOptionPane.showInputDialog(
                             null,
                             "Ingrese el nombre de la Película",
@@ -49,7 +71,7 @@ public class UIPeliculas {
                     );
                     peliculas.buscarPelicula(nombrePelicula);
                     break;
-                case "4":
+                case 4:
                     break CERRAR;
                 default:
 
@@ -62,7 +84,6 @@ public class UIPeliculas {
                             JOptionPane.ERROR_MESSAGE
                     );
 
-                
             }
         }
 

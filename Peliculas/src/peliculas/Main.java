@@ -3,10 +3,34 @@ package peliculas;
 
 import java.util.ArrayList; //el arrayList almacena objetos 
 import javax.swing.JOptionPane;
+import peliculas.ui.UIPeliculas;
+
 public class Main {
 
    
     public static void main(String[] args) {
+        UIPeliculas.interfazUsuario();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         /*
         JOptionPane.ERROR_MESSAGE. -> 0
@@ -19,7 +43,7 @@ public class Main {
         
         //TODO LO QUE INGRESA POR EL CUADRO DE DIALOGO SERÁ CONSIDERADO STRING 
         
-        String valor = JOptionPane.showInputDialog(
+       /* String valor = JOptionPane.showInputDialog(
                 null,
                 "Ingrese un texto",
                 "Entrada",
@@ -31,23 +55,7 @@ public class Main {
                 valor, //ESTE VALOR EQUIVALE A LO QUE SE INGRESÓ ARRIBA EN EL INPUT CREADO 
                 "Mi Mensaje",
                JOptionPane.ERROR_MESSAGE );
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+ 
         
         /*ArrayList<String> meses = new ArrayList<>(); //así se define un arraylist
         
