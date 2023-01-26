@@ -135,4 +135,8 @@ public class MascotaJpaController implements Serializable {
         }
     }
 
+    void destroy(int num_cliente) {
+        
+    }
+
 }

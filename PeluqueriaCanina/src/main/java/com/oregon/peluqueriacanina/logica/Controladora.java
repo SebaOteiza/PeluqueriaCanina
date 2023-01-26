@@ -1,6 +1,7 @@
 package com.oregon.peluqueriacanina.logica;
 
 import com.oregon.peluqueriacanina.persistencia.ControladoraPersistencia;
+import java.util.List;
 
 
 public class Controladora {
@@ -32,6 +33,14 @@ public class Controladora {
         
    
     
+    }
+
+    public List<Mascota> traerMascotas() {
+        return controlPersis.traerMascotas();
+    }
+
+    public void borrarMascota(int num_cliente) {
+        controlPersis.borarMascota(num_cliente);
     }
     
 
