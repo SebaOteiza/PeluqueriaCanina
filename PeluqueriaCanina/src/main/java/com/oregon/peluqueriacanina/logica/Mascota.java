@@ -24,6 +24,7 @@ public class Mascota implements Serializable {
     @OneToOne
     private Duenio unDuenio;
 
+    
     public Mascota() {
     }
 
@@ -38,6 +39,7 @@ public class Mascota implements Serializable {
         this.unDuenio = unDuenio;
     }
 
+    
     public String getNum_cliente() {
         return num_cliente;
     }
